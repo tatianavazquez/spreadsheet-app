@@ -1,0 +1,23 @@
+
+
+table {
+    border: 2px solid rgb(200,200,200);
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+  }
+
+td {
+  text-align: center;
+  cursor: pointer;
+}
+
+tr {
+    border: 2px solid rgb(200,200,200);
+}
+  td > input {
+    border: 2px solid rgb(200,200,200);
+    width: 4em;
+    cursor: pointer;
+  }
+
+
