@@ -44,7 +44,7 @@ const operation = (numbers, sum) => {
 
 
 const handleOnKeyDown = (event) => {
-  const cellValue = event.target.value;
+  const cellValue = event.target.value.toUpperCase();
   setFunctContent(cellValue.substr(5).split(', ')); // erase the function syntax
 
   //Sacar de lo que ingresa el usuario, si hay una referencia a una celda, cambiar esa referencia
@@ -59,7 +59,7 @@ const handleOnKeyDown = (event) => {
   })
   
   if (event.key === 'Enter') {
-    if(cellValue.startsWith('=SUM(') || cellValue.startsWith('=SUB(')) {
+    if(cellValue.startsWith('=SUM(') || cellValue.startsWith('=SUB(') ) {
       if(cellValue.startsWith('=SUM(') && cellValue.endsWith(')')) {
         let add = operation(validValues, true);
         if(isNaN(add)) { alert('Please enter valid parameters')}
